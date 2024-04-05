@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Triangle Checker";
+}
+
+<h2>Check Triangle Existence</h2>
+<form asp-controller="Triangle" asp-action="CheckTriangle" method="post">
+    <label for="x">Enter X:</label>
+    <input type="text" name="x" id="x"><br>
+    <label for="y">Enter Y:</label>
+    <input type="text" name="y" id="y"><br>
+    <label for="z">Enter Z:</label>
+    <input type="text" name="z" id="z"><br>
+    <button type="submit">Check</button>
+</form>
+@if (ViewBag.Exists != null)
+{
+    <p>Triangle Exists: @ViewBag.Exists</p>
+}

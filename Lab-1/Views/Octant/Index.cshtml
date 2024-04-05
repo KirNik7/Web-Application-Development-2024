@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Octant Checker";
+}
+
+<h2>Check Octant</h2>
+<form asp-controller="Octant" asp-action="CheckOctant" method="post">
+    <label for="x">Enter X:</label>
+    <input type="text" name="x" id="x"><br>
+    <label for="y">Enter Y:</label>
+    <input type="text" name="y" id="y"><br>
+    <label for="z">Enter Z:</label>
+    <input type="text" name="z" id="z"><br>
+    <button type="submit">Check</button>
+</form>
+@if (ViewBag.Octant != null)
+{
+    <p>Point lies in Octant: @ViewBag.Octant</p>
+}
