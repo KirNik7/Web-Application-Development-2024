@@ -15,7 +15,7 @@
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    Matrix[i, j] = random.Next(1, 101); // случайные числа от 1 до 100
+                    Matrix[i, j] = random.Next(1, 101);
                 }
             }
         }
